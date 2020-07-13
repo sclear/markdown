@@ -211,14 +211,13 @@ ___
 ---
 
 ``` typescript
-    const AMemocount:React.FC<IcountProps> = ({ count })=> {
-    const counts = useMemo(()=> {
-        console.log('cha nge')
-        return count * 2
-    }, [count])
-    return (
-            <div>count{ counts }</div>
-        )
+    const AmemoCount:React.FC<IcountProps> = ({ count })=> {
+        const newCount = useMemo(()=> {
+            return count * 2
+        }, [count])
+        return (
+                <div>count:{ newCount }</div>
+            )
     }
 ```
 
